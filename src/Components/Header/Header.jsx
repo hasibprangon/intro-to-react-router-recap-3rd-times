@@ -1,19 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import './Header.css'
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     const navStyle = {
-        marginRight:'15px'
+        marginRight:'15px',
+        color:'black'
     }
     return (
         <div>
             <nav >
                 <h3>Navbar</h3>
-                <Link style={navStyle} to="/">Home</Link>
-                <Link style={navStyle} to="/about">About</Link>
-                <Link style={navStyle} to="/contacts">Contacts</Link>
-                <Link style={navStyle} to='/users'>Users</Link>
-                <Link style={navStyle} to='/posts'>Posts</Link>
+                <ActiveLink to="/">Home</ActiveLink>
+                <ActiveLink to="/about">About</ActiveLink>
+                <ActiveLink to="/contacts">Contacts</ActiveLink>
+                <ActiveLink to='/users'>Users</ActiveLink>
+                <ActiveLink to='/posts'>Posts</ActiveLink>
             </nav>
         </div>
     );
